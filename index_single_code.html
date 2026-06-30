@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ahmad Hasan Al Arif Billah — Frontend & Mobile Developer</title>
+  <meta name="description" content="Portofolio Ahmad Hasan Al Arif Billah — Frontend & Mobile Developer dengan 11+ tahun pengalaman di React.js, Next.js, React Native, TypeScript, Laravel, dan Node.js.">
+  <meta name="keywords" content="Ahmad Hasan Al Arif Billah, Arif, Frontend Developer, Mobile Developer, React JS, Next JS, React Native, TypeScript, Laravel, Portofolio">
+  <meta name="author" content="Ahmad Hasan Al Arif Billah">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://devarif.github.io/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://devarif.github.io/">
+  <meta property="og:title" content="Ahmad Hasan Al Arif Billah — Frontend & Mobile Developer">
+  <meta property="og:description" content="Frontend & Mobile Developer dengan 11+ tahun pengalaman membangun produk digital — web dan mobile menggunakan React.js, Next.js, React Native, TypeScript, Laravel, dan Node.js.">
+  <meta property="og:locale" content="id_ID">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ahmad Hasan Al Arif Billah — Frontend & Mobile Developer">
+  <meta name="twitter:description" content="Frontend & Mobile Developer dengan 11+ tahun pengalaman membangun produk digital — web dan mobile.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ahmad Hasan Al Arif Billah",
+    "alternateName": "Arif",
+    "givenName": "Ahmad Hasan",
+    "familyName": "Al Arif Billah",
+    "jobTitle": "Frontend & Mobile Developer",
+    "description": "Frontend & Mobile Developer dengan pengalaman 11+ tahun di React.js, Next.js, React Native, TypeScript, Laravel, dan Node.js.",
+    "url": "https://devarif.github.io/",
+    "sameAs": [
+      "https://www.linkedin.com/in/ahmadhasanalarifbillah/"
+    ],
+    "knowsLanguage": ["Bahasa Indonesia", "English"],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Universitas AMIKOM Yogyakarta"
+    }
+  }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            dark: { base: '#070b18', card: '#0d1326', border: '#18203a', hover: '#141d36', text: '#e2e8f0', muted: '#7e8ea8' },
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.6s ease-out forwards',
+            'slide-up': 'slideUp 0.6s ease-out forwards',
+            'glow': 'glow 3s ease-in-out infinite alternate',
+          },
+          keyframes: {
+            fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+            slideUp: { '0%': { opacity: '0', transform: 'translateY(24px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
+            glow: { '0%': { boxShadow: '0 0 20px rgba(249,115,22,0.05)' }, '100%': { boxShadow: '0 0 40px rgba(249,115,22,0.15)' } },
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    html { transition: background-color 0.3s, color 0.3s; }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    body { font-family: 'Inter', system-ui, sans-serif; }
+
+    .bg-grid {
+      background-image:
+        linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px);
+      background-size: 64px 64px;
+    }
+    .dark .bg-grid {
+      background-image:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+    }
+
+    .bg-dot {
+      background-image: radial-gradient(rgba(0,0,0,0.06) 1px, transparent 1px);
+      background-size: 20px 20px;
+    }
+    .dark .bg-dot {
+      background-image: radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px);
+    }
+  </style>
+  <script>
+    if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
+</head>
+<body class="bg-white dark:bg-dark-base text-gray-900 dark:text-dark-text antialiased bg-grid">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-white/70 dark:bg-dark-base/70 border-b border-gray-200/60 dark:border-dark-border/60">
+    <div class="max-w-5xl mx-auto px-5 h-16 flex items-center justify-between">
+      <a href="#top" class="text-lg font-bold tracking-tight">Arif<span class="text-orange-500 font-bold text-2xl">.</span></a>
+      <div class="flex items-center gap-6 text-sm font-medium">
+        <a href="#tentang" class="hover:text-orange-500 transition-colors hidden sm:inline">Tentang</a>
+        <a href="#pengalaman" class="hover:text-orange-500 transition-colors hidden sm:inline">Pengalaman</a>
+        <a href="#skill" class="hover:text-orange-500 transition-colors hidden sm:inline">Skill</a>
+        <a href="#kontak" class="hover:text-orange-500 transition-colors hidden sm:inline">Kontak</a>
+        <button id="theme-toggle" class="ml-2 p-2 rounded-xl bg-gray-100 dark:bg-dark-hover hover:bg-gray-200 dark:hover:bg-dark-card transition-colors" aria-label="Toggle theme">
+          <svg class="w-5 h-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+          <svg class="w-5 h-5 block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="top" class="min-h-screen flex items-center pt-16 relative overflow-hidden bg-dot">
+    <div class="absolute inset-0 bg-gradient-to-br from-orange-50/30 via-transparent to-rose-50/20 dark:from-orange-500/5 dark:via-transparent dark:to-rose-500/5 pointer-events-none"></div>
+    <div class="absolute top-1/4 right-0 w-96 h-96 bg-orange-400/5 dark:bg-orange-400/5 rounded-full blur-[120px] pointer-events-none"></div>
+    <div class="absolute bottom-1/4 left-0 w-72 h-72 bg-rose-500/5 dark:bg-rose-500/5 rounded-full blur-[100px] pointer-events-none"></div>
+    <div class="max-w-5xl mx-auto px-5 py-20 w-full relative z-10">
+      <div class="max-w-3xl animate-fade-in" style="animation-delay: 0.1s;">
+        <p class="text-orange-500 font-medium text-sm tracking-widest uppercase mb-4">Frontend & Mobile Developer</p>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight tracking-tight mb-4">
+          Ahmad Hasan<br>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-rose-600">Al Arif Billah</span>
+        </h1>
+        <p class="text-lg sm:text-xl text-gray-600 dark:text-dark-muted leading-relaxed mb-8 max-w-2xl">
+          Frontend & Mobile Developer dengan pengalaman 11+ tahun membangun produk digital —
+          web dan mobile (Android & iOS) menggunakan React.js, Next.js, React Native, TypeScript,
+          serta ekosistem backend PHP, Golang, dan Node.js.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="#pengalaman" class="px-6 py-3 rounded-xl bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-semibold text-sm hover:bg-gray-700 dark:hover:bg-gray-200 transition-colors">Lihat Pengalaman</a>
+          <a href="#kontak" class="px-6 py-3 rounded-xl border border-gray-300 dark:border-dark-border font-semibold text-sm hover:bg-gray-100 dark:hover:bg-dark-card transition-colors">Hubungi Saya</a>
+        </div>
+      </div>
+      <div class="grid grid-cols-3 gap-4 mt-16 sm:mt-24 animate-slide-up" style="animation-delay: 0.3s;">
+        <div class="p-5 rounded-2xl bg-gray-50 dark:bg-dark-card border border-gray-100 dark:border-dark-border">
+          <div class="text-xl sm:text-2xl font-bold text-orange-400">11+</div>
+          <div class="text-xs sm:text-sm text-gray-500 dark:text-dark-muted mt-1">Tahun Pengalaman</div>
+        </div>
+        <div class="p-5 rounded-2xl bg-gray-50 dark:bg-dark-card border border-gray-100 dark:border-dark-border">
+          <div class="text-xl sm:text-2xl font-bold text-orange-400">10+</div>
+          <div class="text-xs sm:text-sm text-gray-500 dark:text-dark-muted mt-1">Proyek Selesai</div>
+        </div>
+        <div class="p-5 rounded-2xl bg-gray-50 dark:bg-dark-card border border-gray-100 dark:border-dark-border">
+          <div class="text-xl sm:text-2xl font-bold text-orange-400">2</div>
+          <div class="text-xs sm:text-sm text-gray-500 dark:text-dark-muted mt-1">Platform · Web & Mobile</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tentang -->
+  <section id="tentang" class="py-20 sm:py-28">
+    <div class="max-w-5xl mx-auto px-5">
+      <p class="text-orange-500 font-medium text-sm tracking-widest uppercase mb-2">Tentang</p>
+      <h2 class="text-3xl sm:text-4xl font-bold mb-8">Mengubah Ide Menjadi Produk Digital<span class="text-orange-500">.</span></h2>
+      <div class="grid sm:grid-cols-2 gap-10">
+        <div class="space-y-5 text-gray-600 dark:text-dark-muted leading-relaxed">
+          <p>
+            Halo, saya <strong class="text-gray-900 dark:text-dark-text">Ahmad Hasan Al Arif Billah</strong> — 
+            biasa dipanggil Arif. Seorang <strong class="text-gray-900 dark:text-dark-text">Frontend & Mobile Developer</strong> 
+            dengan pengalaman lebih dari 11 tahun di industri teknologi, berbasis di Jakarta dan Surabaya.
+          </p>
+          <p>
+            Spesialisasi saya mencakup pengembangan <strong class="text-gray-900 dark:text-dark-text">web</strong> dan 
+            <strong class="text-gray-900 dark:text-dark-text">aplikasi mobile</strong> (Android & iOS) menggunakan 
+            React.js, Next.js, React Native, TypeScript, dan JavaScript modern. Saya percaya bahwa produk digital yang baik 
+            lahir dari kode yang bersih, arsitektur yang terstruktur, dan pengalaman pengguna yang intuitif.
+          </p>
+          <p>
+            Di sisi backend, saya memiliki pengalaman solid dengan <strong class="text-gray-900 dark:text-dark-text">PHP</strong> 
+            (Laravel, Lumen, CodeIgniter), <strong class="text-gray-900 dark:text-dark-text">Golang</strong>, dan 
+            <strong class="text-gray-900 dark:text-dark-text">Node.js</strong> (Express.js) — membangun REST API, microservices, 
+            hingga integrasi sistem. Pemahaman fullstack ini memungkinkan saya berkolaborasi secara efektif lintas tim 
+            dan memahami siklus pengembangan secara menyeluruh.
+          </p>
+          <p>
+            Saya selalu bersemangat mempelajari teknologi baru, menyelesaikan tantangan kompleks, dan bekerja sama 
+            dengan tim yang memiliki visi untuk menciptakan solusi digital yang berdampak nyata.
+          </p>
+        </div>
+        <div class="space-y-5">
+          <div class="p-5 rounded-2xl bg-gray-50 dark:bg-dark-card border border-gray-100 dark:border-dark-border">
+            <div class="font-semibold text-sm text-gray-500 dark:text-dark-muted uppercase tracking-wider">Fokus</div>
+            <div class="mt-1">Frontend & Mobile Development — membangun antarmuka yang responsif, scalable, dan user-friendly untuk web serta platform mobile.</div>
+          </div>
+          <div class="p-5 rounded-2xl bg-gray-50 dark:bg-dark-card border border-gray-100 dark:border-dark-border">
+            <div class="font-semibold text-sm text-gray-500 dark:text-dark-muted uppercase tracking-wider">Kekuatan</div>
+            <div class="mt-1">Jembatan antara kebutuhan bisnis dan teknis. Menguasai frontend modern maupun backend API, mampu berkomunikasi dengan stakeholder hingga eksekusi teknis.</div>
+          </div>
+          <div class="p-5 rounded-2xl bg-gray-50 dark:bg-dark-card border border-gray-100 dark:border-dark-border">
+            <div class="font-semibold text-sm text-gray-500 dark:text-dark-muted uppercase tracking-wider">Lokasi</div>
+            <div class="mt-1">Surabaya, Jawa Timur, Indonesia · terbuka untuk remote, hybrid, maupun kolaborasi onsite.</div>
+          </div>
+          <div class="p-5 rounded-2xl bg-gray-50 dark:bg-dark-card border border-gray-100 dark:border-dark-border">
+            <div class="font-semibold text-sm text-gray-500 dark:text-dark-muted uppercase tracking-wider">Pendidikan</div>
+            <div class="mt-1">S.Kom Teknik Informatika — Universitas AMIKOM Yogyakarta (2011 - 2015)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pengalaman -->
+  <section id="pengalaman" class="py-20 sm:py-28 bg-gray-50/50 dark:bg-[#090e1d]/80 bg-dot">
+    <div class="max-w-5xl mx-auto px-5">
+      <p class="text-orange-500 font-medium text-sm tracking-widest uppercase mb-2">Pengalaman</p>
+      <h2 class="text-3xl sm:text-4xl font-bold mb-12">Perjalanan Karir</h2>
+      <div class="relative">
+        <div class="flex flex-col">
+          <!-- PT Surya Anugrah Mulya -->
+          <div class="relative">
+            <div class="absolute left-[13px] sm:left-[15px] top-0 bottom-0 w-[2px] bg-gray-300 dark:bg-dark-border"></div>
+            <div class="absolute left-[9px] sm:left-[11px] top-7 w-[10px] h-[10px] rounded-full bg-orange-500 ring-4 ring-white dark:ring-dark-base z-10"></div>
+            <div class="pl-8 sm:pl-14 pb-8">
+              <div class="p-6 sm:p-8 rounded-2xl bg-white dark:bg-dark-card border border-gray-200 dark:border-dark-border dark:shadow-[0_0_30px_-10px_rgba(249,115,22,0.08)]">
+                <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
+                  <div>
+                    <h3 class="text-xl font-bold">Frontend Developer</h3>
+                    <p class="text-orange-500 font-medium">PT Surya Anugrah Mulya</p>
+                  </div>
+                  <span class="text-sm text-gray-400 dark:text-dark-muted bg-gray-100 dark:bg-dark-hover px-3 py-1 rounded-full">Jan 2024 — Sekarang</span>
+                </div>
+                <p class="text-gray-600 dark:text-dark-muted">Mengembangkan dan memelihara aplikasi web dan mobile untuk produk digital perusahaan. Fokus pada performa, aksesibilitas, dan pengalaman pengguna yang optimal menggunakan React.js, TypeScript, dan Tailwind CSS.</p>
+              </div>
+            </div>
+          </div>
+          <!-- MIFX -->
+          <div class="relative">
+            <div class="absolute left-[13px] sm:left-[15px] top-0 bottom-0 w-[2px] bg-gray-300 dark:bg-dark-border"></div>
+            <div class="absolute left-[9px] sm:left-[11px] top-7 w-[10px] h-[10px] rounded-full bg-orange-500 ring-4 ring-white dark:ring-dark-base z-10"></div>
+            <div class="pl-8 sm:pl-14 pb-8">
+              <div class="p-6 sm:p-8 rounded-2xl bg-white dark:bg-dark-card border border-gray-200 dark:border-dark-border dark:shadow-[0_0_30px_-10px_rgba(249,115,22,0.08)]">
+                <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
+                  <div>
+                    <h3 class="text-xl font-bold">Frontend Developer</h3>
+                    <p class="text-orange-500 font-medium">MIFX — Monex Investindo Futures</p>
+                  </div>
+                  <span class="text-sm text-gray-400 dark:text-dark-muted bg-gray-100 dark:bg-dark-hover px-3 py-1 rounded-full">Jul 2023 — Jan 2024</span>
+                </div>
+                <p class="text-gray-600 dark:text-dark-muted mb-3">Berkontribusi pada platform trading forex dan komoditas MIFX. Fokus pada pengalaman pengguna untuk trader baru maupun aktif melalui antarmuka yang responsif dan informatif.</p>
+                <ul class="space-y-2 text-sm text-gray-600 dark:text-dark-muted">
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-orange-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    Mengembangkan fitur sinyal trading, jalur edukasi pengguna, dan ekosistem rewards point.
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-orange-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    Berkolaborasi dengan tim lintas fungsi untuk menghadirkan pengalaman produk yang terpadu.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- dxtr Asia -->
+          <div class="relative">
+            <div class="absolute left-[13px] sm:left-[15px] top-0 bottom-0 w-[2px] bg-gray-300 dark:bg-dark-border"></div>
+            <div class="absolute left-[9px] sm:left-[11px] top-7 w-[10px] h-[10px] rounded-full bg-orange-500 ring-4 ring-white dark:ring-dark-base z-10"></div>
+            <div class="pl-8 sm:pl-14 pb-8">
+              <div class="p-6 sm:p-8 rounded-2xl bg-white dark:bg-dark-card border border-gray-200 dark:border-dark-border dark:shadow-[0_0_30px_-10px_rgba(249,115,22,0.08)]">
+                <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
+                  <div>
+                    <h3 class="text-xl font-bold">Frontend Developer & Backend Developer</h3>
+                    <p class="text-orange-500 font-medium">dxtr Asia</p>
+                  </div>
+                  <span class="text-sm text-gray-400 dark:text-dark-muted bg-gray-100 dark:bg-dark-hover px-3 py-1 rounded-full">Feb 2019 — Nov 2023</span>
+                </div>
+                <p class="text-gray-600 dark:text-dark-muted mb-3">Menangani pengembangan aplikasi web dan mobile (Android & iOS) dari sisi frontend maupun backend. Merancang dan memelihara REST API berbasis microservices untuk produk AYO SRC menggunakan Lumen.</p>
+                <ul class="space-y-2 text-sm text-gray-600 dark:text-dark-muted">
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-orange-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    Mengembangkan aplikasi mobile Android & iOS menggunakan React Native dan Xcode.
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-orange-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    Fullstack development menggunakan Laravel dan Next.js untuk proyek pihak ketiga.
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-orange-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    Deployment aplikasi ke Play Store dan App Store secara reguler.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Pinopi -->
+          <div class="relative">
+            <div class="absolute left-[13px] sm:left-[15px] top-0 bottom-0 w-[2px] bg-gray-300 dark:bg-dark-border"></div>
+            <div class="absolute left-[9px] sm:left-[11px] top-7 w-[10px] h-[10px] rounded-full bg-orange-500 ring-4 ring-white dark:ring-dark-base z-10"></div>
+            <div class="pl-8 sm:pl-14 pb-8">
+              <div class="p-6 sm:p-8 rounded-2xl bg-white dark:bg-dark-card border border-gray-200 dark:border-dark-border dark:shadow-[0_0_30px_-10px_rgba(249,115,22,0.08)]">
+                <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
+                  <div>
+                    <h3 class="text-xl font-bold">Fullstack Developer</h3>
+                    <p class="text-orange-500 font-medium">Pinopi</p>
+                  </div>
+                  <span class="text-sm text-gray-400 dark:text-dark-muted bg-gray-100 dark:bg-dark-hover px-3 py-1 rounded-full">Feb 2018 — Feb 2019</span>
+                </div>
+                <p class="text-gray-600 dark:text-dark-muted mb-3">Mengelola pengembangan website marketplace Pinopi dari backend hingga frontend.</p>
+                <ul class="space-y-2 text-sm text-gray-600 dark:text-dark-muted">
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-orange-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    Fullstack development menggunakan CodeIgniter, Laravel, Node.js, dan React.js.
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-orange-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    Membangun website e-commerce untuk klien menggunakan Laravel.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Halo Jasa -->
+          <div class="relative">
+            <div class="absolute left-[13px] sm:left-[15px] top-0 bottom-0 w-[2px] bg-gray-300 dark:bg-dark-border"></div>
+            <div class="absolute left-[9px] sm:left-[11px] top-7 w-[10px] h-[10px] rounded-full bg-orange-500 ring-4 ring-white dark:ring-dark-base z-10"></div>
+            <div class="pl-8 sm:pl-14 pb-8">
+              <div class="p-6 sm:p-8 rounded-2xl bg-white dark:bg-dark-card border border-gray-200 dark:border-dark-border dark:shadow-[0_0_30px_-10px_rgba(249,115,22,0.08)]">
+                <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
+                  <div>
+                    <h3 class="text-xl font-bold">Backend Developer</h3>
+                    <p class="text-orange-500 font-medium">Halo Jasa</p>
+                  </div>
+                  <span class="text-sm text-gray-400 dark:text-dark-muted bg-gray-100 dark:bg-dark-hover px-3 py-1 rounded-full">Apr 2017 — Feb 2018</span>
+                </div>
+                <p class="text-gray-600 dark:text-dark-muted mb-3">Mengembangkan dan memelihara REST API untuk platform Halo Jasa serta integrasi dengan API pihak ketiga.</p>
+                <ul class="space-y-2 text-sm text-gray-600 dark:text-dark-muted">
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-orange-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    Membangun REST API menggunakan Laravel untuk website Halo Jasa.
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-orange-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    Integrasi sistem dengan REST API dari vendor eksternal.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- TNC Digital Media -->
+          <div class="relative">
+            <div class="absolute left-[13px] sm:left-[15px] top-0 bottom-0 w-[2px] bg-gray-300 dark:bg-dark-border"></div>
+            <div class="absolute left-[9px] sm:left-[11px] top-7 w-[10px] h-[10px] rounded-full bg-orange-500 ring-4 ring-white dark:ring-dark-base z-10"></div>
+            <div class="pl-8 sm:pl-14">
+              <div class="p-6 sm:p-8 rounded-2xl bg-white dark:bg-dark-card border border-gray-200 dark:border-dark-border dark:shadow-[0_0_30px_-10px_rgba(249,115,22,0.08)]">
+                <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
+                  <div>
+                    <h3 class="text-xl font-bold">Backend Developer</h3>
+                    <p class="text-orange-500 font-medium">TNC Digital Media</p>
+                  </div>
+                  <span class="text-sm text-gray-400 dark:text-dark-muted bg-gray-100 dark:bg-dark-hover px-3 py-1 rounded-full">Feb 2015 — Apr 2017</span>
+                </div>
+                <p class="text-gray-600 dark:text-dark-muted mb-3">Memulai karir sebagai Backend Developer, menangani pengembangan website klien dan sistem manajemen konten.</p>
+                <ul class="space-y-2 text-sm text-gray-600 dark:text-dark-muted">
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-orange-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    Fullstack development menggunakan CodeIgniter untuk berbagai proyek klien.
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-orange-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    Pengembangan dan kustomisasi tema serta plugin WordPress.
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-orange-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    Analisis dan perancangan database untuk mendukung sistem aplikasi.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skill -->
+  <section id="skill" class="py-20 sm:py-28">
+    <div class="max-w-5xl mx-auto px-5">
+      <p class="text-orange-500 font-medium text-sm tracking-widest uppercase mb-2">Skill</p>
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4">Tech Stack</h2>
+      <p class="text-gray-600 dark:text-dark-muted mb-12 max-w-xl">Stack yang dikuasai — dari frontend web, mobile, backend, hingga tools pendukung.</p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl bg-gray-50 dark:bg-dark-card border border-gray-100 dark:border-dark-border dark:hover:border-orange-500/30 dark:hover:shadow-[0_0_30px_-10px_rgba(249,115,22,0.12)] transition-all duration-300">
+          <div class="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-500/10 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
+          <h3 class="font-bold text-lg mb-1">Frontend Web</h3>
+          <p class="text-sm text-gray-500 dark:text-dark-muted">React.js, Next.js, JavaScript, TypeScript, Tailwind CSS</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-gray-50 dark:bg-dark-card border border-gray-100 dark:border-dark-border dark:hover:border-orange-500/30 dark:hover:shadow-[0_0_30px_-10px_rgba(249,115,22,0.12)] transition-all duration-300">
+          <div class="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-500/10 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+          </div>
+          <h3 class="font-bold text-lg mb-1">Mobile</h3>
+          <p class="text-sm text-gray-500 dark:text-dark-muted">React Native, Android (Java/Kotlin), iOS</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-gray-50 dark:bg-dark-card border border-gray-100 dark:border-dark-border dark:hover:border-orange-500/30 dark:hover:shadow-[0_0_30px_-10px_rgba(249,115,22,0.12)] transition-all duration-300">
+          <div class="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-500/10 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+          </div>
+          <h3 class="font-bold text-lg mb-1">Backend</h3>
+          <p class="text-sm text-gray-500 dark:text-dark-muted">PHP (Laravel, Lumen, CI), Golang, Node.js (Express.js)</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-gray-50 dark:bg-dark-card border border-gray-100 dark:border-dark-border dark:hover:border-orange-500/30 dark:hover:shadow-[0_0_30px_-10px_rgba(249,115,22,0.12)] transition-all duration-300">
+          <div class="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-500/10 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/></svg>
+          </div>
+          <h3 class="font-bold text-lg mb-1">Database</h3>
+          <p class="text-sm text-gray-500 dark:text-dark-muted">MySQL, PostgreSQL, MongoDB</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-gray-50 dark:bg-dark-card border border-gray-100 dark:border-dark-border dark:hover:border-orange-500/30 dark:hover:shadow-[0_0_30px_-10px_rgba(249,115,22,0.12)] transition-all duration-300">
+          <div class="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-500/10 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <h3 class="font-bold text-lg mb-1">Tools & Lainnya</h3>
+          <p class="text-sm text-gray-500 dark:text-dark-muted">Git, RESTful API, Agile, Leadership</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-gray-50 dark:bg-dark-card border border-gray-100 dark:border-dark-border dark:hover:border-orange-500/30 dark:hover:shadow-[0_0_30px_-10px_rgba(249,115,22,0.12)] transition-all duration-300">
+          <div class="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-500/10 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m0 4h6m-6 4h8m-8 4h6"/></svg>
+          </div>
+          <h3 class="font-bold text-lg mb-1">Soft Skills</h3>
+          <p class="text-sm text-gray-500 dark:text-dark-muted">Project Management, Research</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / Kontak -->
+  <section id="kontak" class="py-20 sm:py-28 bg-gray-50/50 dark:bg-[#090e1d]/80 bg-dot">
+    <div class="max-w-5xl mx-auto px-5 text-center">
+      <p class="text-orange-500 font-medium text-sm tracking-widest uppercase mb-2">Kontak</p>
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4">Mari Terhubung</h2>
+      <p class="text-gray-600 dark:text-dark-muted max-w-xl mx-auto mb-10">
+        Jika kamu tertarik untuk berkolaborasi, mendiskusikan project, atau sekadar ngobrol seputar tech — 
+        aku selalu terbuka untuk terhubung.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4 mb-12">
+        <a href="https://www.linkedin.com/in/ahmadhasanalarifbillah/" target="_blank" class="px-6 py-3 rounded-xl bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-semibold text-sm hover:bg-gray-700 dark:hover:bg-gray-200 transition-colors inline-flex items-center gap-2">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+        <a href="mailto:arifmatika@gmail.com" class="px-6 py-3 rounded-xl border border-gray-300 dark:border-dark-border font-semibold text-sm hover:bg-gray-100 dark:hover:bg-dark-card transition-colors inline-flex items-center gap-2">
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          Email
+        </a>
+      </div>
+      <div class="inline-flex items-center gap-2 text-sm text-dark-muted">
+        <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+        Terbuka untuk kolaborasi
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 border-t border-gray-200 dark:border-dark-border">
+    <div class="max-w-5xl mx-auto px-5 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-dark-muted">
+      <div>&copy; 2026 Ahmad Hasan Al Arif Billah.</div>
+      <div class="flex gap-6">
+        <a href="#tentang" class="hover:text-gray-600 dark:hover:text-dark-text transition-colors">Tentang</a>
+        <a href="#pengalaman" class="hover:text-gray-600 dark:hover:text-dark-text transition-colors">Pengalaman</a>
+        <a href="#skill" class="hover:text-gray-600 dark:hover:text-dark-text transition-colors">Skill</a>
+        <a href="#kontak" class="hover:text-gray-600 dark:hover:text-dark-text transition-colors">Kontak</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+    toggle.addEventListener('click', () => {
+      html.classList.toggle('dark');
+      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+    });
+  </script>
+</body>
+</html>
