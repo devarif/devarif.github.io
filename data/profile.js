@@ -24,7 +24,7 @@ const profile = {
   stats: [
     { value: '11+', label: 'Tahun Pengalaman' },
     { value: '10+', label: 'Proyek Selesai' },
-    { value: '2', label: 'Platform · Web & Mobile' }
+    { value: '2+', label: 'Platform · Web & Mobile & Backend' }
   ],
 
   aboutTitle: 'Mengubah Ide Menjadi Produk Digital',
