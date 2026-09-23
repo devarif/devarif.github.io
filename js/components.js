@@ -18,17 +18,18 @@ function renderCheckIcon() {
   return `<svg class="w-4 h-4 text-orange-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>`;
 }
 
-function renderNavbar() {
+function renderNavbar(t) {
   return `
 <nav class="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-white/70 dark:bg-dark-base/70 border-b border-gray-200/60 dark:border-dark-border/60">
   <div class="max-w-5xl mx-auto px-5 h-16 flex items-center justify-between">
     <a href="#top" class="text-lg font-bold tracking-tight">Arif<span class="text-orange-500 font-bold text-2xl">.</span></a>
     <div class="flex items-center gap-6 text-sm font-medium">
-      <a href="#tentang" class="hover:text-orange-500 transition-colors hidden sm:inline">Tentang</a>
-      <a href="#pengalaman" class="hover:text-orange-500 transition-colors hidden sm:inline">Pengalaman</a>
-      <a href="#skill" class="hover:text-orange-500 transition-colors hidden sm:inline">Skill</a>
-      <a href="#kontak" class="hover:text-orange-500 transition-colors hidden sm:inline">Kontak</a>
-      <button id="theme-toggle" class="ml-2 p-2 rounded-xl bg-gray-100 dark:bg-dark-hover hover:bg-gray-200 dark:hover:bg-dark-card transition-colors" aria-label="Toggle theme">
+      <a href="#tentang" class="hover:text-orange-500 transition-colors hidden sm:inline">${t.navAbout}</a>
+      <a href="#pengalaman" class="hover:text-orange-500 transition-colors hidden sm:inline">${t.navExperience}</a>
+      <a href="#skill" class="hover:text-orange-500 transition-colors hidden sm:inline">${t.navSkills}</a>
+      <a href="#kontak" class="hover:text-orange-500 transition-colors hidden sm:inline">${t.navContact}</a>
+      <button id="lang-toggle" class="ml-2 px-3 py-2 rounded-xl bg-gray-100 dark:bg-dark-hover hover:bg-gray-200 dark:hover:bg-dark-card transition-colors inline-flex items-center gap-1.5 text-xs font-bold tracking-widest" aria-label="Switch language"><span class="text-base leading-none">${t.langFlag}</span>${t.langLabel}</button>
+      <button id="theme-toggle" class="ml-2 p-2 rounded-xl bg-gray-100 dark:bg-dark-hover hover:bg-gray-200 dark:hover:bg-dark-card transition-colors" aria-label="${t.themeLabel}">
         <svg class="w-5 h-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
         <svg class="w-5 h-5 block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
       </button>
@@ -72,7 +73,7 @@ function renderHero(p) {
 </section>`;
 }
 
-function renderAbout(p) {
+function renderAbout(p, t) {
   const paragraphs = p.aboutParagraphs.map(text =>
     `<p>${text}</p>`
   ).join('\n          ');
@@ -86,7 +87,7 @@ function renderAbout(p) {
   return `
 <section id="tentang" class="py-20 sm:py-28">
   <div class="max-w-5xl mx-auto px-5">
-    ${renderSectionLabel('Tentang')}
+    ${renderSectionLabel(t.sAbout)}
     <h2 class="text-3xl sm:text-4xl font-bold mb-8">${p.aboutTitle}<span class="text-orange-500">.</span></h2>
     <div class="grid sm:grid-cols-2 gap-10">
       <div class="space-y-5 text-gray-600 dark:text-dark-muted leading-relaxed">${paragraphs}</div>
@@ -96,7 +97,7 @@ function renderAbout(p) {
 </section>`;
 }
 
-function renderExperience(experiences) {
+function renderExperience(experiences, t) {
   const items = experiences.map((exp, i) => {
     const pointsList = exp.points.length
       ? `<ul class="space-y-2 text-sm text-gray-600 dark:text-dark-muted">${exp.points.map(p =>
@@ -130,8 +131,8 @@ function renderExperience(experiences) {
 <section id="pengalaman" class="relative py-20 sm:py-28 bg-gray-50/50 dark:bg-[#090e1d]/80 bg-dot">
   <canvas class="particle-canvas absolute inset-0 w-full h-full pointer-events-none" aria-hidden="true"></canvas>
   <div class="max-w-5xl mx-auto px-5">
-    ${renderSectionLabel('Pengalaman')}
-    <h2 class="text-3xl sm:text-4xl font-bold mb-12">Perjalanan Karir</h2>
+    ${renderSectionLabel(t.sExperience)}
+    <h2 class="text-3xl sm:text-4xl font-bold mb-12">${t.sCareer}</h2>
     <div class="relative">
       <div class="flex flex-col">${items}</div>
     </div>
@@ -139,7 +140,7 @@ function renderExperience(experiences) {
 </section>`;
 }
 
-function renderSkills(skills) {
+function renderSkills(skills, t) {
   const cards = skills.map(s => `
       <div class="p-6 rounded-2xl bg-gray-50 dark:bg-dark-card border border-gray-100 dark:border-dark-border dark:hover:border-orange-500/30 dark:hover:shadow-[0_0_30px_-10px_rgba(249,115,22,0.12)] transition-all duration-300">
         <div class="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-500/10 flex items-center justify-center mb-4">${iconByName(s.icon)}</div>
@@ -150,20 +151,20 @@ function renderSkills(skills) {
   return `
 <section id="skill" class="py-20 sm:py-28">
   <div class="max-w-5xl mx-auto px-5">
-    ${renderSectionLabel('Skill')}
-    <h2 class="text-3xl sm:text-4xl font-bold mb-4">Tech Stack</h2>
-    <p class="text-gray-600 dark:text-dark-muted mb-12 max-w-xl">Stack yang dikuasai — dari frontend web, mobile, backend, hingga tools pendukung.</p>
+    ${renderSectionLabel(t.sSkills)}
+    <h2 class="text-3xl sm:text-4xl font-bold mb-4">${t.sSkillsTitle}</h2>
+    <p class="text-gray-600 dark:text-dark-muted mb-12 max-w-xl">${t.sSkillsSub}</p>
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">${cards}</div>
   </div>
 </section>`;
 }
 
-function renderContact(p) {
+function renderContact(p, t) {
   return `
 <section id="kontak" class="relative py-20 sm:py-28 bg-gray-50/50 dark:bg-[#090e1d]/80 bg-dot">
   <canvas class="particle-canvas absolute inset-0 w-full h-full pointer-events-none" aria-hidden="true"></canvas>
   <div class="max-w-5xl mx-auto px-5 text-center">
-    ${renderSectionLabel('Kontak')}
+    ${renderSectionLabel(t.sContact)}
     <h2 class="text-3xl sm:text-4xl font-bold mb-4">${p.contactTitle}</h2>
     <p class="text-gray-600 dark:text-dark-muted max-w-xl mx-auto mb-10">${p.contactDescription}</p>
     <div class="flex flex-wrap justify-center gap-4 mb-12">
@@ -184,16 +185,16 @@ function renderContact(p) {
 </section>`;
 }
 
-function renderFooter() {
+function renderFooter(t) {
   return `
 <footer class="py-8 border-t border-gray-200 dark:border-dark-border">
   <div class="max-w-5xl mx-auto px-5 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-dark-muted">
-    <div>&copy; 2026 Ahmad Hasan Al Arif Billah.</div>
+    <div>${t.footerRights}</div>
     <div class="flex gap-6">
-      <a href="#tentang" class="hover:text-gray-600 dark:hover:text-dark-text transition-colors">Tentang</a>
-      <a href="#pengalaman" class="hover:text-gray-600 dark:hover:text-dark-text transition-colors">Pengalaman</a>
-      <a href="#skill" class="hover:text-gray-600 dark:hover:text-dark-text transition-colors">Skill</a>
-      <a href="#kontak" class="hover:text-gray-600 dark:hover:text-dark-text transition-colors">Kontak</a>
+      <a href="#tentang" class="hover:text-gray-600 dark:hover:text-dark-text transition-colors">${t.navAbout}</a>
+      <a href="#pengalaman" class="hover:text-gray-600 dark:hover:text-dark-text transition-colors">${t.navExperience}</a>
+      <a href="#skill" class="hover:text-gray-600 dark:hover:text-dark-text transition-colors">${t.navSkills}</a>
+      <a href="#kontak" class="hover:text-gray-600 dark:hover:text-dark-text transition-colors">${t.navContact}</a>
     </div>
   </div>
 </footer>`;

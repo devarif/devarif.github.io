@@ -1,75 +1,152 @@
 const profile = {
-  name: 'Ahmad Hasan Al Arif Billah',
-  nickname: 'Arif',
-  title: 'Frontend & Mobile Developer',
-  email: 'arifmatika@gmail.com',
-  location: {
-    short: 'Jakarta dan Surabaya',
-    full: 'Surabaya, Jawa Timur, Indonesia',
-    note: 'terbuka untuk remote, hybrid, maupun kolaborasi onsite.'
-  },
-  linkedin: 'https://www.linkedin.com/in/ahmadhasanalarifbillah/',
-  canonical: 'https://devarif.github.io/',
-
-  heroLabel: 'Frontend & Mobile Developer',
-  heroNameLine1: 'Ahmad Hasan',
-  heroNameLine2: 'Al Arif Billah',
-  heroDescription:
-    'Frontend & Mobile Developer dengan pengalaman 11+ tahun membangun produk digital — web dan mobile (Android & iOS) menggunakan React.js, Next.js, React Native, TypeScript, serta ekosistem backend PHP, Golang, dan Node.js.',
-  heroCta: [
-    { label: 'Lihat Pengalaman', href: '#pengalaman', primary: true },
-    { label: 'Hubungi Saya', href: '#kontak', primary: false }
-  ],
-
-  stats: [
-    { value: '11+', label: 'Tahun Pengalaman' },
-    { value: '10+', label: 'Proyek Selesai' },
-    { value: '2+', label: 'Platform · Web & Mobile & Backend' }
-  ],
-
-  aboutTitle: 'Mengubah Ide Menjadi Produk Digital',
-  aboutParagraphs: [
-    'Halo, saya <strong>Ahmad Hasan Al Arif Billah</strong> — biasa dipanggil Arif. Seorang <strong>Frontend & Mobile Developer</strong> dengan pengalaman lebih dari 11 tahun di industri teknologi, berbasis di Jakarta dan Surabaya.',
-    'Spesialisasi saya mencakup pengembangan <strong>web</strong> dan <strong>aplikasi mobile</strong> (Android & iOS) menggunakan React.js, Next.js, React Native, TypeScript, dan JavaScript modern. Saya percaya bahwa produk digital yang baik lahir dari kode yang bersih, arsitektur yang terstruktur, dan pengalaman pengguna yang intuitif.',
-    'Di sisi backend, saya memiliki pengalaman solid dengan <strong>PHP</strong> (Laravel, Lumen, CodeIgniter), <strong>Golang</strong>, dan <strong>Node.js</strong> (Express.js) — membangun REST API, microservices, hingga integrasi sistem. Pemahaman fullstack ini memungkinkan saya berkolaborasi secara efektif lintas tim dan memahami siklus pengembangan secara menyeluruh.',
-    'Saya selalu bersemangat mempelajari teknologi baru, menyelesaikan tantangan kompleks, dan bekerja sama dengan tim yang memiliki visi untuk menciptakan solusi digital yang berdampak nyata.'
-  ],
-
-  aboutCards: [
-    {
-      label: 'Fokus',
-      text: 'Frontend & Mobile Development — membangun antarmuka yang responsif, scalable, dan user-friendly untuk web serta platform mobile.'
+  id: {
+    name: 'Ahmad Hasan Al Arif Billah',
+    nickname: 'Arif',
+    title: 'Frontend & Mobile Developer',
+    email: 'arifmatika@gmail.com',
+    location: {
+      short: 'Jakarta dan Surabaya',
+      full: 'Surabaya, Jawa Timur, Indonesia',
+      note: 'terbuka untuk remote, hybrid, maupun kolaborasi onsite.'
     },
-    {
-      label: 'Kekuatan',
-      text: 'Jembatan antara kebutuhan bisnis dan teknis. Menguasai frontend modern maupun backend API, mampu berkomunikasi dengan stakeholder hingga eksekusi teknis.'
-    },
-    {
-      label: 'Lokasi',
-      text: 'Surabaya, Jawa Timur, Indonesia · terbuka untuk remote, hybrid, maupun kolaborasi onsite.'
-    },
-    {
-      label: 'Pendidikan',
-      text: 'S.Kom Teknik Informatika — Universitas AMIKOM Yogyakarta (2011 - 2015)'
+    linkedin: 'https://www.linkedin.com/in/ahmadhasanalarifbillah/',
+    canonical: 'https://devarif.github.io/',
+
+    heroLabel: 'Frontend & Mobile Developer',
+    heroNameLine1: 'Ahmad Hasan',
+    heroNameLine2: 'Al Arif Billah',
+    heroDescription:
+      'Frontend & Mobile Developer dengan pengalaman 11+ tahun membangun produk digital — web dan mobile (Android & iOS) menggunakan React.js, Next.js, React Native, TypeScript, serta ekosistem backend PHP, Golang, dan Node.js.',
+    heroCta: [
+      { label: 'Lihat Pengalaman', href: '#pengalaman', primary: true },
+      { label: 'Hubungi Saya', href: '#kontak', primary: false }
+    ],
+
+    stats: [
+      { value: '11+', label: 'Tahun Pengalaman' },
+      { value: '10+', label: 'Proyek Selesai' },
+      { value: '2+', label: 'Platform · Web & Mobile & Backend' }
+    ],
+
+    aboutTitle: 'Mengubah Ide Menjadi Produk Digital',
+    aboutParagraphs: [
+      'Halo, saya <strong>Ahmad Hasan Al Arif Billah</strong> — biasa dipanggil Arif. Seorang <strong>Frontend & Mobile Developer</strong> dengan pengalaman lebih dari 11 tahun di industri teknologi, berbasis di Jakarta dan Surabaya.',
+      'Spesialisasi saya mencakup pengembangan <strong>web</strong> dan <strong>aplikasi mobile</strong> (Android & iOS) menggunakan React.js, Next.js, React Native, TypeScript, dan JavaScript modern. Saya percaya bahwa produk digital yang baik lahir dari kode yang bersih, arsitektur yang terstruktur, dan pengalaman pengguna yang intuitif.',
+      'Di sisi backend, saya memiliki pengalaman solid dengan <strong>PHP</strong> (Laravel, Lumen, CodeIgniter), <strong>Golang</strong>, dan <strong>Node.js</strong> (Express.js) — membangun REST API, microservices, hingga integrasi sistem. Pemahaman fullstack ini memungkinkan saya berkolaborasi secara efektif lintas tim dan memahami siklus pengembangan secara menyeluruh.',
+      'Saya selalu bersemangat mempelajari teknologi baru, menyelesaikan tantangan kompleks, dan bekerja sama dengan tim yang memiliki visi untuk menciptakan solusi digital yang berdampak nyata.'
+    ],
+
+    aboutCards: [
+      {
+        label: 'Fokus',
+        text: 'Frontend & Mobile Development — membangun antarmuka yang responsif, scalable, dan user-friendly untuk web serta platform mobile.'
+      },
+      {
+        label: 'Kekuatan',
+        text: 'Jembatan antara kebutuhan bisnis dan teknis. Menguasai frontend modern maupun backend API, mampu berkomunikasi dengan stakeholder hingga eksekusi teknis.'
+      },
+      {
+        label: 'Lokasi',
+        text: 'Surabaya, Jawa Timur, Indonesia · terbuka untuk remote, hybrid, maupun kolaborasi onsite.'
+      },
+      {
+        label: 'Pendidikan',
+        text: 'S.Kom Teknik Informatika — Universitas AMIKOM Yogyakarta (2011 - 2015)'
+      }
+    ],
+
+    contactTitle: 'Mari Terhubung',
+    contactDescription:
+      'Jika kamu tertarik untuk berkolaborasi, mendiskusikan project, atau sekadar ngobrol seputar tech — aku selalu terbuka untuk terhubung.',
+    contactStatus: 'Terbuka untuk kolaborasi',
+
+    seo: {
+      title: 'Ahmad Hasan Al Arif Billah — Frontend & Mobile Developer',
+      description:
+        'Portofolio Ahmad Hasan Al Arif Billah — Frontend & Mobile Developer dengan 11+ tahun pengalaman di React.js, Next.js, React Native, TypeScript, Laravel, dan Node.js.',
+      keywords:
+        'Ahmad Hasan Al Arif Billah, Arif, Frontend Developer, Mobile Developer, React JS, Next JS, React Native, TypeScript, Laravel, Portofolio',
+      ogTitle: 'Ahmad Hasan Al Arif Billah — Frontend & Mobile Developer',
+      ogDescription:
+        'Frontend & Mobile Developer dengan 11+ tahun pengalaman membangun produk digital — web dan mobile menggunakan React.js, Next.js, React Native, TypeScript, Laravel, dan Node.js.',
+      twitterTitle: 'Ahmad Hasan Al Arif Billah — Frontend & Mobile Developer',
+      twitterDescription:
+        'Frontend & Mobile Developer dengan 11+ tahun pengalaman membangun produk digital — web dan mobile.'
     }
-  ],
+  },
+  en: {
+    name: 'Ahmad Hasan Al Arif Billah',
+    nickname: 'Arif',
+    title: 'Frontend & Mobile Developer',
+    email: 'arifmatika@gmail.com',
+    location: {
+      short: 'Jakarta and Surabaya',
+      full: 'Surabaya, East Java, Indonesia',
+      note: 'open to remote, hybrid, and onsite collaboration.'
+    },
+    linkedin: 'https://www.linkedin.com/in/ahmadhasanalarifbillah/',
+    canonical: 'https://devarif.github.io/',
 
-  contactTitle: 'Mari Terhubung',
-  contactDescription:
-    'Jika kamu tertarik untuk berkolaborasi, mendiskusikan project, atau sekadar ngobrol seputar tech — aku selalu terbuka untuk terhubung.',
-  contactStatus: 'Terbuka untuk kolaborasi',
+    heroLabel: 'Frontend & Mobile Developer',
+    heroNameLine1: 'Ahmad Hasan',
+    heroNameLine2: 'Al Arif Billah',
+    heroDescription:
+      'Frontend & Mobile Developer with 11+ years of experience building digital products — web and mobile (Android & iOS) using React.js, Next.js, React Native, TypeScript, along with a backend ecosystem of PHP, Golang, and Node.js.',
+    heroCta: [
+      { label: 'View Experience', href: '#pengalaman', primary: true },
+      { label: 'Contact Me', href: '#kontak', primary: false }
+    ],
 
-  seo: {
-    title: 'Ahmad Hasan Al Arif Billah — Frontend & Mobile Developer',
-    description:
-      'Portofolio Ahmad Hasan Al Arif Billah — Frontend & Mobile Developer dengan 11+ tahun pengalaman di React.js, Next.js, React Native, TypeScript, Laravel, dan Node.js.',
-    keywords:
-      'Ahmad Hasan Al Arif Billah, Arif, Frontend Developer, Mobile Developer, React JS, Next JS, React Native, TypeScript, Laravel, Portofolio',
-    ogTitle: 'Ahmad Hasan Al Arif Billah — Frontend & Mobile Developer',
-    ogDescription:
-      'Frontend & Mobile Developer dengan 11+ tahun pengalaman membangun produk digital — web dan mobile menggunakan React.js, Next.js, React Native, TypeScript, Laravel, dan Node.js.',
-    twitterTitle: 'Ahmad Hasan Al Arif Billah — Frontend & Mobile Developer',
-    twitterDescription:
-      'Frontend & Mobile Developer dengan 11+ tahun pengalaman membangun produk digital — web dan mobile.'
+    stats: [
+      { value: '11+', label: 'Years of Experience' },
+      { value: '10+', label: 'Projects Completed' },
+      { value: '2+', label: 'Platform · Web & Mobile & Backend' }
+    ],
+
+    aboutTitle: 'Turning Ideas into Digital Products',
+    aboutParagraphs: [
+      'Hi, I am <strong>Ahmad Hasan Al Arif Billah</strong> — known as Arif. A <strong>Frontend & Mobile Developer</strong> with more than 11 years of experience in the tech industry, based in Jakarta and Surabaya.',
+      'My specialization covers <strong>web</strong> and <strong>mobile application</strong> development (Android & iOS) using React.js, Next.js, React Native, TypeScript, and modern JavaScript. I believe great digital products come from clean code, structured architecture, and an intuitive user experience.',
+      'On the backend, I have solid experience with <strong>PHP</strong> (Laravel, Lumen, CodeIgniter), <strong>Golang</strong>, and <strong>Node.js</strong> (Express.js) — building REST APIs, microservices, and system integrations. This fullstack understanding lets me collaborate effectively across teams and grasp the entire development lifecycle.',
+      'I am always excited to learn new technologies, solve complex challenges, and work with teams that share a vision for creating digital solutions with real impact.'
+    ],
+
+    aboutCards: [
+      {
+        label: 'Focus',
+        text: 'Frontend & Mobile Development — building responsive, scalable, and user-friendly interfaces for web and mobile platforms.'
+      },
+      {
+        label: 'Strength',
+        text: 'A bridge between business and technical needs. Skilled in modern frontend and backend APIs, able to communicate with stakeholders down to technical execution.'
+      },
+      {
+        label: 'Location',
+        text: 'Surabaya, East Java, Indonesia · open to remote, hybrid, and onsite collaboration.'
+      },
+      {
+        label: 'Education',
+        text: "S.Kom (Bachelor of Computer Science) — Universitas AMIKOM Yogyakarta (2011 - 2015)"
+      }
+    ],
+
+    contactTitle: 'Let’s Connect',
+    contactDescription:
+      'If you are interested in collaborating, discussing a project, or just talking tech — I am always open to connecting.',
+    contactStatus: 'Open for collaboration',
+
+    seo: {
+      title: 'Ahmad Hasan Al Arif Billah — Frontend & Mobile Developer',
+      description:
+        'Portfolio of Ahmad Hasan Al Arif Billah — Frontend & Mobile Developer with 11+ years of experience in React.js, Next.js, React Native, TypeScript, Laravel, and Node.js.',
+      keywords:
+        'Ahmad Hasan Al Arif Billah, Arif, Frontend Developer, Mobile Developer, React JS, Next JS, React Native, TypeScript, Laravel, Portfolio',
+      ogTitle: 'Ahmad Hasan Al Arif Billah — Frontend & Mobile Developer',
+      ogDescription:
+        'Frontend & Mobile Developer with 11+ years of experience building digital products — web and mobile using React.js, Next.js, React Native, TypeScript, Laravel, and Node.js.',
+      twitterTitle: 'Ahmad Hasan Al Arif Billah — Frontend & Mobile Developer',
+      twitterDescription:
+        'Frontend & Mobile Developer with 11+ years of experience building digital products — web and mobile.'
+    }
   }
 };
