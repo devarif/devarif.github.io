@@ -38,7 +38,15 @@ Tidak perlu menyentuh `index.html` atau `js/components.js` untuk perubahan teks.
 
 ## Cara Menjalankan
 
-Buka `index.html` langsung di browser — jalan tanpa server berkat CDN Tailwind.
+Tanpa build tool — langsung jalan:
+
+1. **Buka langsung** — double-click `index.html` dan buka di browser. Tanpa server berkat CDN Tailwind.
+2. **Dengan server lokal** (opsional, agar path/serve lebih akurat):
+   ```bash
+   cd /Users/user/code/arif
+   python3 -m http.server 8000
+   ```
+   lalu buka `http://localhost:8000` di browser.
 
 ## Deployment
 

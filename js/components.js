@@ -53,6 +53,7 @@ function renderHero(p) {
 
   return `
 <section id="top" class="min-h-screen flex items-center pt-16 relative overflow-hidden bg-dot">
+  <canvas class="particle-canvas absolute inset-0 w-full h-full pointer-events-none" aria-hidden="true"></canvas>
   <div class="absolute inset-0 bg-gradient-to-br from-orange-50/30 via-transparent to-rose-50/20 dark:from-orange-500/5 dark:via-transparent dark:to-rose-500/5 pointer-events-none"></div>
   <div class="absolute top-1/4 right-0 w-96 h-96 bg-orange-400/5 dark:bg-orange-400/5 rounded-full blur-[120px] pointer-events-none"></div>
   <div class="absolute bottom-1/4 left-0 w-72 h-72 bg-rose-500/5 dark:bg-rose-500/5 rounded-full blur-[100px] pointer-events-none"></div>
@@ -126,7 +127,8 @@ function renderExperience(experiences) {
   }).join('');
 
   return `
-<section id="pengalaman" class="py-20 sm:py-28 bg-gray-50/50 dark:bg-[#090e1d]/80 bg-dot">
+<section id="pengalaman" class="relative py-20 sm:py-28 bg-gray-50/50 dark:bg-[#090e1d]/80 bg-dot">
+  <canvas class="particle-canvas absolute inset-0 w-full h-full pointer-events-none" aria-hidden="true"></canvas>
   <div class="max-w-5xl mx-auto px-5">
     ${renderSectionLabel('Pengalaman')}
     <h2 class="text-3xl sm:text-4xl font-bold mb-12">Perjalanan Karir</h2>
@@ -158,7 +160,8 @@ function renderSkills(skills) {
 
 function renderContact(p) {
   return `
-<section id="kontak" class="py-20 sm:py-28 bg-gray-50/50 dark:bg-[#090e1d]/80 bg-dot">
+<section id="kontak" class="relative py-20 sm:py-28 bg-gray-50/50 dark:bg-[#090e1d]/80 bg-dot">
+  <canvas class="particle-canvas absolute inset-0 w-full h-full pointer-events-none" aria-hidden="true"></canvas>
   <div class="max-w-5xl mx-auto px-5 text-center">
     ${renderSectionLabel('Kontak')}
     <h2 class="text-3xl sm:text-4xl font-bold mb-4">${p.contactTitle}</h2>

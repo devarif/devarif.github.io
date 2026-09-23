@@ -130,6 +130,7 @@
 
   <!-- Hero -->
   <section id="top" class="min-h-screen flex items-center pt-16 relative overflow-hidden bg-dot">
+    <canvas class="particle-canvas absolute inset-0 w-full h-full pointer-events-none" aria-hidden="true"></canvas>
     <div class="absolute inset-0 bg-gradient-to-br from-orange-50/30 via-transparent to-rose-50/20 dark:from-orange-500/5 dark:via-transparent dark:to-rose-500/5 pointer-events-none"></div>
     <div class="absolute top-1/4 right-0 w-96 h-96 bg-orange-400/5 dark:bg-orange-400/5 rounded-full blur-[120px] pointer-events-none"></div>
     <div class="absolute bottom-1/4 left-0 w-72 h-72 bg-rose-500/5 dark:bg-rose-500/5 rounded-full blur-[100px] pointer-events-none"></div>
@@ -220,7 +221,8 @@
   </section>
 
   <!-- Pengalaman -->
-  <section id="pengalaman" class="py-20 sm:py-28 bg-gray-50/50 dark:bg-[#090e1d]/80 bg-dot">
+  <section id="pengalaman" class="relative py-20 sm:py-28 bg-gray-50/50 dark:bg-[#090e1d]/80 bg-dot">
+    <canvas class="particle-canvas absolute inset-0 w-full h-full pointer-events-none" aria-hidden="true"></canvas>
     <div class="max-w-5xl mx-auto px-5">
       <p class="text-orange-500 font-medium text-sm tracking-widest uppercase mb-2">Pengalaman</p>
       <h2 class="text-3xl sm:text-4xl font-bold mb-12">Perjalanan Karir</h2>
@@ -239,7 +241,41 @@
                   </div>
                   <span class="text-sm text-gray-400 dark:text-dark-muted bg-gray-100 dark:bg-dark-hover px-3 py-1 rounded-full">Jan 2024 — Sekarang</span>
                 </div>
-                <p class="text-gray-600 dark:text-dark-muted">Mengembangkan dan memelihara aplikasi web dan mobile untuk produk digital perusahaan. Fokus pada performa, aksesibilitas, dan pengalaman pengguna yang optimal menggunakan React.js, TypeScript, dan Tailwind CSS.</p>
+                <p class="text-gray-600 dark:text-dark-muted mb-3">Mengembangkan dan memelihara aplikasi web dan mobile untuk produk digital perusahaan. Fokus pada performa, aksesibilitas, dan pengalaman pengguna yang optimal menggunakan React.js, TypeScript, dan Tailwind CSS.</p>
+                <ul class="space-y-2 text-sm text-gray-600 dark:text-dark-muted">
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-orange-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    Mengembangkan fitur baru dan enhancement menggunakan Next.js, React, dan TypeScript untuk meningkatkan kualitas dan pengalaman pengguna.
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-orange-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    Merancang dan mengimplementasikan komponen reusable dan sistem frontend yang scalable untuk mendukung pertumbuhan platform.
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-orange-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    Mengoptimalkan performa aplikasi, aksesibilitas (WCAG), dan SEO di seluruh halaman dan komponen untuk meningkatkan Core Web Vitals.
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-orange-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    Berkolaborasi erat dengan product owner, designer, dan backend engineer untuk menghadirkan pengalaman pengguna yang seamless.
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-orange-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    Mengimplementasikan dan memelihara CI/CD pipeline serta strategi testing frontend menggunakan Jest dan E2E menggunakan Maestro.
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-orange-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    Menerapkan best practice dalam pengembangan web modern termasuk SSR, SSG, ISR, dan edge rendering strategies.
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-orange-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    Melakukan code review untuk menjaga kualitas dan konsistensi kode dalam tim.
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-orange-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    Membangun dan mengintegrasikan frontend dengan REST API untuk mendukung aplikasi web dan mobile produk perusahaan.
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -256,15 +292,39 @@
                   </div>
                   <span class="text-sm text-gray-400 dark:text-dark-muted bg-gray-100 dark:bg-dark-hover px-3 py-1 rounded-full">Jul 2023 — Jan 2024</span>
                 </div>
-                <p class="text-gray-600 dark:text-dark-muted mb-3">Berkontribusi pada platform trading forex dan komoditas MIFX. Fokus pada pengalaman pengguna untuk trader baru maupun aktif melalui antarmuka yang responsif dan informatif.</p>
+                <p class="text-gray-600 dark:text-dark-muted mb-3">Mengembangkan platform trading MIFX secara menyeluruh — aplikasi mobile, website, maupun library/package internal yang digunakan oleh platform tersebut. Berkolaborasi erat dengan tim product (UI/UX) untuk menghadirkan pengalaman trading yang konsisten, responsif, dan mudah digunakan di berbagai perangkat.</p>
                 <ul class="space-y-2 text-sm text-gray-600 dark:text-dark-muted">
                   <li class="flex items-start gap-2">
                     <svg class="w-4 h-4 text-orange-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    Mengembangkan fitur sinyal trading, jalur edukasi pengguna, dan ekosistem rewards point.
+                    Mengembangkan dan memelihara aplikasi mobile serta website platform trading MIFX agar tampilan dan fungsionalitas konsisten di semua perangkat.
                   </li>
                   <li class="flex items-start gap-2">
                     <svg class="w-4 h-4 text-orange-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    Berkolaborasi dengan tim lintas fungsi untuk menghadirkan pengalaman produk yang terpadu.
+                    Membangun dan memelihara library/package internal yang digunakan bersama oleh aplikasi mobile dan website untuk mendukung fitur yang reusable dan konsisten.
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-orange-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    Berkolaborasi erat dengan tim product (UI/UX) mulai dari desain, review, hingga implementasi fitur.
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-orange-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    Mengembangkan fitur platform trading, termasuk sinyal trading, jalur edukasi pengguna, dan ekosistem rewards point.
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-orange-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    Menerapkan best practice performa, aksesibilitas, dan kualitas kode untuk menjaga stabilitas platform.
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-orange-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    Mengoptimalkan performa website dengan strategi rendering modern seperti SSR, SSG, ISR, dan edge rendering.
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-orange-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    Mengintegrasikan frontend dengan REST API agar data dan fitur berjalan end-to-end di website maupun aplikasi mobile.
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-orange-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    Mengembangkan proof of concept (POC) bersama tim R&D untuk memvalidasi kebutuhan baru sebelum diimplementasikan.
                   </li>
                 </ul>
               </div>
@@ -283,19 +343,39 @@
                   </div>
                   <span class="text-sm text-gray-400 dark:text-dark-muted bg-gray-100 dark:bg-dark-hover px-3 py-1 rounded-full">Feb 2019 — Nov 2023</span>
                 </div>
-                <p class="text-gray-600 dark:text-dark-muted mb-3">Menangani pengembangan aplikasi web dan mobile (Android & iOS) dari sisi frontend maupun backend. Merancang dan memelihara REST API berbasis microservices untuk produk AYO SRC menggunakan Lumen.</p>
+                <p class="text-gray-600 dark:text-dark-muted mb-3">Menangani pengembangan aplikasi web dan mobile (Android & iOS) dari sisi frontend maupun backend, serta merancang dan memelihara REST API berbasis microservices untuk produk AYO SRC.</p>
                 <ul class="space-y-2 text-sm text-gray-600 dark:text-dark-muted">
                   <li class="flex items-start gap-2">
                     <svg class="w-4 h-4 text-orange-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    Mengembangkan aplikasi mobile Android & iOS menggunakan React Native dan Xcode.
+                    Mengembangkan aplikasi mobile Android & iOS menggunakan React Native dan Xcode, termasuk integrasi native module dan handling proses build aplikasi.
                   </li>
                   <li class="flex items-start gap-2">
                     <svg class="w-4 h-4 text-orange-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    Fullstack development menggunakan Laravel dan Next.js untuk proyek pihak ketiga.
+                    Merancang, membangun, dan memelihara REST API berbasis microservices untuk produk AYO SRC menggunakan Lumen.
                   </li>
                   <li class="flex items-start gap-2">
                     <svg class="w-4 h-4 text-orange-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    Deployment aplikasi ke Play Store dan App Store secara reguler.
+                    Fullstack development menggunakan Laravel dan Next.js untuk berbagai proyek pihak ketiga.
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-orange-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    Mengelola deployment aplikasi ke Play Store dan App Store secara reguler, termasuk proses review dan release management.
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-orange-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    Memastikan integrasi antara frontend dan backend berjalan end-to-end agar fitur berfungsi dengan baik di web maupun mobile.
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-orange-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    Membangun dan memelihara admin panel/dashboard untuk kebutuhan internal produk AYO SRC.
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-orange-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    Mengintegrasikan API pihak ketiga seperti layanan notifikasi untuk mendukung fitur transaksi serta komunikasi pengguna.
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-orange-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    Melakukan maintenance, debugging, dan perbaikan bug untuk menjaga stabilitas aplikasi.
                   </li>
                 </ul>
               </div>
@@ -324,6 +404,10 @@
                     <svg class="w-4 h-4 text-orange-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                     Membangun website e-commerce untuk klien menggunakan Laravel.
                   </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-orange-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    Melakukan maintenance serta pengembangan fitur lanjutan pada website marketplace Pinopi.
+                  </li>
                 </ul>
               </div>
             </div>
@@ -346,6 +430,14 @@
                   <li class="flex items-start gap-2">
                     <svg class="w-4 h-4 text-orange-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                     Membangun REST API menggunakan Laravel untuk website Halo Jasa.
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-orange-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    Integrasi payment gateway untuk mendukung proses transaksi pembayaran di platform.
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-orange-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    Mengembangkan fitur PPOB untuk pembayaran tagihan dan pengisian pulsa dengan integrasi ke penyedia layanan.
                   </li>
                   <li class="flex items-start gap-2">
                     <svg class="w-4 h-4 text-orange-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
@@ -380,7 +472,19 @@
                   </li>
                   <li class="flex items-start gap-2">
                     <svg class="w-4 h-4 text-orange-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    Analisis dan perancangan database untuk mendukung sistem aplikasi.
+                    Analisis dan perancangan skema database untuk mendukung kebutuhan sistem aplikasi.
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-orange-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    Integrasi data dari CMS ke tampilan website agar konten dapat dikelola dengan mudah oleh klien.
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-orange-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    Berkolaborasi dengan tim desain untuk menerjemahkan desain menjadi halaman website yang fungsional dan responsif.
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-orange-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    Melakukan maintenance, update konten, serta optimasi kecepatan halaman website klien.
                   </li>
                 </ul>
               </div>
@@ -445,7 +549,8 @@
   </section>
 
   <!-- CTA / Kontak -->
-  <section id="kontak" class="py-20 sm:py-28 bg-gray-50/50 dark:bg-[#090e1d]/80 bg-dot">
+  <section id="kontak" class="relative py-20 sm:py-28 bg-gray-50/50 dark:bg-[#090e1d]/80 bg-dot">
+    <canvas class="particle-canvas absolute inset-0 w-full h-full pointer-events-none" aria-hidden="true"></canvas>
     <div class="max-w-5xl mx-auto px-5 text-center">
       <p class="text-orange-500 font-medium text-sm tracking-widest uppercase mb-2">Kontak</p>
       <h2 class="text-3xl sm:text-4xl font-bold mb-4">Mari Terhubung</h2>
@@ -509,6 +614,81 @@
     });
     scrollToTopBtn.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Particle Network
+    const canvases = document.querySelectorAll('.particle-canvas');
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const anims = [];
+
+    canvases.forEach(canvas => {
+      const ctx = canvas.getContext('2d');
+      const section = canvas.parentElement;
+      let width, height, particles, animId, running = false;
+
+      function resize() {
+        width = canvas.width = canvas.offsetWidth;
+        height = canvas.height = canvas.offsetHeight;
+        const count = Math.min(50, Math.floor((width * height) / 15000));
+        particles = Array.from({ length: count }, () => ({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          vx: (Math.random() - 0.5) * 0.5,
+          vy: (Math.random() - 0.5) * 0.5,
+        }));
+      }
+      resize();
+      requestAnimationFrame(resize);
+      window.addEventListener('resize', resize);
+
+      function draw() {
+        ctx.clearRect(0, 0, width, height);
+        const dotColor = html.classList.contains('dark') ? 'rgba(251,146,60,0.8)' : 'rgba(249,115,22,0.7)';
+        for (const p of particles) {
+          p.x += p.vx; p.y += p.vy;
+          if (p.x < 0 || p.x > width) p.vx *= -1;
+          if (p.y < 0 || p.y > height) p.vy *= -1;
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, 1.8, 0, Math.PI * 2);
+          ctx.fillStyle = dotColor;
+          ctx.fill();
+        }
+        for (let i = 0; i < particles.length; i++) {
+          for (let j = i + 1; j < particles.length; j++) {
+            const dx = particles[i].x - particles[j].x;
+            const dy = particles[i].y - particles[j].y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < 130) {
+              ctx.strokeStyle = 'rgba(249,115,22,' + (0.15 * (1 - dist / 130)).toFixed(2) + ')';
+              ctx.lineWidth = 0.8;
+              ctx.beginPath();
+              ctx.moveTo(particles[i].x, particles[i].y);
+              ctx.lineTo(particles[j].x, particles[j].y);
+              ctx.stroke();
+            }
+          }
+        }
+        if (running) animId = requestAnimationFrame(draw);
+      }
+
+      function stop() {
+        running = false;
+        if (animId) cancelAnimationFrame(animId);
+      }
+
+      function start() {
+        if (running || reduceMotion) return;
+        running = true;
+        draw();
+      }
+
+      const io = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) start(); else stop();
+        });
+      }, { threshold: 0.02 });
+      io.observe(section);
+      anims.push({ io });
     });
   </script>
 </body>
